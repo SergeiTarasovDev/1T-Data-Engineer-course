@@ -1,1 +1,1 @@
-# 1t-git-training
+it's my first project in 1T course
