@@ -1,0 +1,10 @@
+
+Команды для dockerfile
+1. docker build -t task1.3:latest
+2. docker run -d -p 5432:5432 --name task1.3_c task1.3:latest
+3. docker exec -it task1.3_c psql -U postgres
+
+
+Команды для docker-comopose
+1. docker-comopose up -d
+2. docker exec -it afa32f2f883fa574c33b831c3c8557492f3d3d54c6691c7d8a8dcdaa9b4b7522 psql -U postgres
