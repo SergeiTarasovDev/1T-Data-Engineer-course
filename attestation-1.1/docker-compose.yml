@@ -1,0 +1,15 @@
+version: "1.0"
+services:
+  db:
+    image: postgres:latest
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_DB: testdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./ddl/ddl-init.sql:/docker-entrypoint-initdb.d/ddl-init.sql
+      - ./dml/dml-init.sql:/docker-entrypoint-initdb.d/dml-init.sql
+      - ./source/stations.csv:/usr/stations.csv
+      - ./source/trips.csv:/usr/trips.csv
